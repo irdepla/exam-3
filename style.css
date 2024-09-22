@@ -39,3 +39,8 @@
     content: url(./images/fluent_sport-20-filled.svg);
     margin-right: 12px;
 }
+
+.features__info p::before{
+    content: url(./images/Star\ 5.svg);
+}
+
