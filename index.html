@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Tailwind CSS</title>
+  </head>
+  <body class="bg-primary">
+    <header>
+      <nav class="px-6 py-6">
+        <div class="container flex justify-between items-center">
+          <div class="flex flex-col gap-[3px]">
+            <span class="w-[18px] h-[2px] bg-white__text"></span>
+            <span class="w-[18px] h-[2px] bg-white__text"></span>
+            <span class="w-[18px] h-[2px] bg-white__text"></span>
+          </div>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="navbar logo" />
+          </div>
+          <div class="nav__shopping">
+            <button class="flex gap-6">
+              <img src="./images/search btn.svg" alt="search button" />
+              <img src="./images/shopping bag.svg" alt="shopping bag" />
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero__section">
+        <div
+          class="container flex flex-col mt-9 justify-center items-center gap-[22px]"
+        >
+          <div class="hero__info flex flex-col gap-6">
+            <span class="text-white uppercase"> Virtual Headsets </span>
+            <div class="hero__hr"></div>
+            <h1 class="font-bold text-[44px] text-white__text">
+              Experience a new dimension of reality
+            </h1>
+            <span class="hero__desc flex text-white__text">
+              Step into the future with our virtual headset, come to life right
+              before your eyes
+            </span>
+            <div class="flex flex-col items-center">
+              <button
+                class="universal__btn flex items-center justify-center gap-6 text-[#182627]"
+              >
+                <span>Visit Sttore</span>
+                <img src="./images/arrow_forward.svg" alt="" />
+              </button>
+              <button
+                class="flex items-center justify-center bg-transparent mt-6 border-[1px] border-solid border-[#FFFFFF33] px-[81px] py-4 gap-3 rounded-[4px]"
+              >
+                <img src="./images/explore.svg" alt="" />
+                <span class="text-white__text">Explore</span>
+              </button>
+            </div>
+
+            <div class="flex flex-col gap-6">
+              <div>
+                <span class="text-white__text"> FOLLOW US </span>
+              </div>
+              <div class="flex gap-3">
+                <div
+              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+            >
+              <img
+                src="./images/twitter.svg"
+                alt=""
+                class="px-[10px] py-[10px]"
+              />
+            </div>
+            <div
+              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+            >
+              <img
+                src="./images/instagram.svg"
+                alt=""
+                class="px-[10px] py-[10px]"
+              />
+            </div>
+            <div
+              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+            >
+              <img
+                src="./images/ic_round-discord.svg"
+                alt=""
+                class="px-[10px] py-[10px]"
+              />
+            </div>
+            <div
+              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+            >
+              <img
+                src="./images/facebook.svg"
+                alt=""
+                class="px-[10px] py-[10px]"
+              />
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__img flex flex-col gap-[22px] text-[#FFFFFF99] relative">
+            <img src="./images/hero image .png" alt="a man wearing vr" />
+            <div class="img__hr absolute bottom-[93px]"></div>
+            <span class="education">Enhanced Education</span>
+            <span class="sport">Training and Simulation</span>
+          </div>
+        </div>
+      </section>
+      <section class="features__section text-white__text mt-8">
+        <div class="container flex flex-col">
+          <div class="features__info">
+            <h1 class="font-bold text-2xl">
+              Our Virtual Headsets Shine with Unique Features!
+            </h1>
+          </div>
+          <div class="features__img"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

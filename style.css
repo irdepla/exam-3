@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero__hr {
+    border: 0; 
+    height: 1px; 
+    background: linear-gradient(90deg, rgba(189, 0, 255, 0) 0%, rgba(189, 0, 255, 0.4) 48.78%, rgba(189, 0, 255, 0.013) 99.99%, rgba(189, 0, 255, 0) 100%);
+    width: 150px; 
+}
+
+
+.img__hr{
+    border: 4px solid; /* Set the border thickness */
+  border-image-source: linear-gradient(90deg, rgba(189, 0, 255, 0) 1.52%, rgba(189, 0, 255, 0.3) 100%);
+  border-image-slice: 1; /* Ensure the gradient covers the entire border */
+  width: 100vw;
+}
+
+.universal__btn {
+    padding: 16px 63px;
+    background-color: #3DDEED;
+    border-radius: 4px;
+    box-shadow: 0px 20px 49px 0px #3DDEED2B;
+}
+
+.hero__desc::before{
+    content: url(./images/Star.svg);
+    margin-right: 10px;
+}
+
+.education::before{
+    content: url(./images/Vector.svg);
+    margin-right: 12px;
+}
+
+
+.sport::before{
+    content: url(./images/fluent_sport-20-filled.svg);
+    margin-right: 12px;
+}
