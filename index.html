@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Tailwind CSS</title>
   </head>
-  <body class="bg-primary">
+  <body class="bg-primary overflow-x-hidden m-auto">
     <header>
       <nav class="px-6 py-6">
         <div class="container flex justify-between items-center">
-          <div class="flex flex-col gap-[3px]">
+          <div class="flex flex-col gap-[3px] cursor-pointer desktop:hidden">
             <span class="w-[18px] h-[2px] bg-white__text"></span>
             <span class="w-[18px] h-[2px] bg-white__text"></span>
             <span class="w-[18px] h-[2px] bg-white__text"></span>
           </div>
+          <ul class="gap-8 hidden desktop:flex">
+            <li class="text-[#FFFFFFCC]">
+              <span>Home</span>
+              <div class="hero__hr home__hr"></div>
+            </li>
+            <li class="text-[#FFFFFFCC]">Catalog</li>
+            <li class="text-[#FFFFFFCC]">Features</li>
+            <li class="text-[#FFFFFFCC]">Contact</li>
+          </ul>
           <div class="logo">
             <img src="./images/logo.svg" alt="navbar logo" />
+          </div>
+          <div class="search__bar">
+            <input type="text" placeholder="Search games & products.." class="px-6 py-3 bg-[#FFFFFF0D] outline-none">
           </div>
           <div class="nav__shopping">
             <button class="flex gap-6">
@@ -29,19 +41,21 @@
     <main>
       <section class="hero__section">
         <div
-          class="container flex flex-col mt-9 justify-center items-center gap-[22px]"
+          class="container flex flex-col desktop:flex-row mt-9 justify-between desktop:justify-between items-center gap-[22px]"
         >
           <div class="hero__info flex flex-col gap-6">
             <span class="text-white uppercase"> Virtual Headsets </span>
             <div class="hero__hr"></div>
-            <h1 class="font-bold text-[44px] text-white__text">
-              Experience a new dimension of reality
+            <h1 class="font-bold text-[44px] desktop:text-[80px] text-white__text">
+              Experience a <br class="hidden desktop:block ">
+              new dimension <br class="hidden desktop:block ">
+               of reality
             </h1>
             <span class="hero__desc flex text-white__text">
-              Step into the future with our virtual headset, come to life right
+              Step into the future with our virtual headset, come to life right <br class="hidden desktop:block ">
               before your eyes
             </span>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col desktop:flex-row desktop:items-center desktop:gap-6 items-center">
               <button
                 class="universal__btn flex items-center justify-center gap-6 text-[#182627]"
               >
@@ -62,49 +76,55 @@
               </div>
               <div class="flex gap-3">
                 <div
-              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
-            >
-              <img
-                src="./images/twitter.svg"
-                alt=""
-                class="px-[10px] py-[10px]"
-              />
-            </div>
-            <div
-              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
-            >
-              <img
-                src="./images/instagram.svg"
-                alt=""
-                class="px-[10px] py-[10px]"
-              />
-            </div>
-            <div
-              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
-            >
-              <img
-                src="./images/ic_round-discord.svg"
-                alt=""
-                class="px-[10px] py-[10px]"
-              />
-            </div>
-            <div
-              class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
-            >
-              <img
-                src="./images/facebook.svg"
-                alt=""
-                class="px-[10px] py-[10px]"
-              />
-            </div>
+                  class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+                >
+                  <img
+                    src="./images/twitter.svg"
+                    alt=""
+                    class="px-[10px] py-[10px]"
+                  />
+                </div>
+                <div
+                  class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+                >
+                  <img
+                    src="./images/instagram.svg"
+                    alt=""
+                    class="px-[10px] py-[10px]"
+                  />
+                </div>
+                <div
+                  class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+                >
+                  <img
+                    src="./images/ic_round-discord.svg"
+                    alt=""
+                    class="px-[10px] py-[10px]"
+                  />
+                </div>
+                <div
+                  class="border-[1px] border-[#FFFFFF1A] border-solid rounded-[4px]"
+                >
+                  <img
+                    src="./images/facebook.svg"
+                    alt=""
+                    class="px-[10px] py-[10px]"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div class="hero__img flex flex-col gap-[22px] text-[#FFFFFF99] relative">
-            <img src="./images/hero image .png" alt="a man wearing vr" />
-            <div class="img__hr absolute bottom-[93px]"></div>
-            <span class="education">Enhanced Education</span>
+          <div
+            class="hero__img flex flex-col gap-[22px] text-[#FFFFFF99] relative"
+          >
+            <img src="./images/hero image 1.png" alt="a man wearing vr" />
+            <img src="./images/Group 11.png" alt="" class="absolute right-[380px] top-[-20px]">
+            <img src="./images/Group 12.png" alt="" class="absolute left-[450px] top-[60px]">
+            <div class="img__hr absolute bottom-[93px] desktop:bottom-[40px]"></div>
+            <div class="">
+              <span class="education">Enhanced Education</span>
             <span class="sport">Training and Simulation</span>
+            </div>
           </div>
         </div>
       </section>
@@ -115,19 +135,200 @@
               Our Virtual Headsets Shine with Unique Features!
             </h1>
             <div class="flex flex-col gap-4 mt-6">
-              <p class="flex gap-3 font-medium">High-resolution OLED or LCD screens: Provide sharp and clear visuals.</p>
-            <p class="flex gap-3 font-medium">Inside-out tracking: Built-in sensors (cameras or other sensors).</p>
-            <p class="flex gap-3 font-medium">High-resolution OLED or LCD screens: Provide sharp and clear visuals.</p>
+              <p class="flex gap-3 font-medium">
+                High-resolution OLED or LCD screens: Provide sharp and clear
+                visuals.
+              </p>
+              <p class="flex gap-3 font-medium">
+                Inside-out tracking: Built-in sensors (cameras or other
+                sensors).
+              </p>
+              <p class="flex gap-3 font-medium">
+                High-resolution OLED or LCD screens: Provide sharp and clear
+                visuals.
+              </p>
             </div>
           </div>
           <div class="features__img relative">
-            <img src="./images/vr glasses.png" alt="vr glasses" class="z-10">
-            <img src="./images/Ellipse 1200.svg" alt="Ellipse" class="absolute z-20 bottom-[80px]">
+            <img src="./images/vr glasses.png" alt="vr glasses" class="z-10" />
+            <img
+              src="./images/Ellipse 1200.svg"
+              alt="Ellipse"
+              class="absolute z-20 bottom-[80px]"
+            />
           </div>
         </div>
       </section>
-      <section></section>
+      <section class="feedback__section text-white__text mt-8">
+        <div class="container flex flex-col gap-6">
+          <div class="feedback__info flex flex-col gap-6">
+            <h2 class="font-bold text-2xl">Jane Wilson, Gaming Creator</h2>
+            <span class="font-normal text-sm">
+              A virtual headset creator is an individual or company that
+              specializes in designing and manufacturing virtual reality
+              headsets, also known as VR headsets.
+            </span>
+            <div>
+              <button
+                class="universal__btn feedback__btn flex justify-center items-center gap-6"
+              >
+                <span class="font-medium text-base"> Read my blog </span>
+                <img src="./images/arrow_forward.svg" alt="" />
+              </button>
+            </div>
+            <div class="flex gap-16 items-center">
+              <div class="relative flex items-center">
+                <img src="./images/Polygon 7.svg" alt="" class="absolute" />
+                <img
+                  src="./images/Polygon 8.svg"
+                  alt=""
+                  class="absolute left-7"
+                />
+                <img
+                  src="./images/Polygon 9.svg"
+                  alt=""
+                  class="absolute left-14"
+                />
+                <img
+                  src="./images/Polygon 10.svg"
+                  alt=""
+                  class="absolute left-[86px]"
+                />
+                <img
+                  src="./images/Polygon 11.svg"
+                  alt=""
+                  class="absolute left-[114px]"
+                />
+                <span class="font-medium text-[18px] block"> +258K Views </span>
+              </div>
+              <div>
+                <span class="font-medium text-[18px]"> +258K Views </span>
+              </div>
+            </div>
+          </div>
+          <div class="feedback__img">
+            <img src="./images/gamer.png" alt="woman gamer" class="gamer" />
+            <img src="./images/tweet.png" alt="tweet" />
+          </div>
+        </div>
+      </section>
+      <section class="games__section text-white__text mt-8">
+        <div class="container">
+          <div class="games__info">
+            <h3 class="font-bold text-[24px]">Top Games</h3>
+            <p class="mt-6 font-normal text-base">
+              If you buy video 2 games, you will receive 1 video game for free,
+              along with a
+              <a href="#" class="text-[#3DDEED]"><span class="font-bold text-base">50%</span></a>
+              discount.
+            </p>
+          </div>
+          <div class="card__carusel mt-[48px]">
+            <div
+              class="overflow-x-scroll flex items-center overflow-y-visible w-full gap-[24px]"
+            >
+              <div class="card">
+                <div class="relative">
+                  <img src="./images/horizon.png" alt="" />
+                </div>
+                <div class="">
+                  <h4 class="font-bold">Call of Duty:Modern Warfare</h4>
+                </div>
+              </div>
+              <div class="card">
+                <div class="relative">
+                  <img src="./images/half life.png" alt="" />
+                </div>
+                <div class="">
+                  <h4 class="font-bold">Call of Duty:Modern Warfare</h4>
+                </div>
+              </div>
+              <div class="card">
+                <div class="relative">
+                  <img src="./images/box.png" alt="" />
+                </div>
+                <div class="">
+                  <h4 class="font-bold">Call of Duty:Modern Warfare</h4>
+                </div>
+              </div>
+              <div class="card">
+                <div class="relative">
+                  <img src="./images/call of duty.png" alt="" />
+                </div>
+                <div class="">
+                  <h4 class="font-bold">Call of Duty:Modern Warfare</h4>
+                </div>
+              </div>
+              <div class="card">
+                <div class="relative">
+                  <img src="./images/call of duty.png" alt="" />
+                </div>
+                <div class="">
+                  <h4 class="font-bold">Call of Duty:Modern Warfare</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq__section mt-7 text-white__text">
+        <div class="container">
+          <h2 class="text-center uppercase text-2xl font-bold">F.A.Q</h2>
+          <ul class="flex flex-col gap-6 mt-6">
+            <li class="flex gap-[10px] px-3 py-6 rounded-[8px] justify-between  bg-[#FFFFFF0D]">
+              <span>How does a virtual headset work?</span>
+              <img src="./images/arrow down.svg" alt="">
+            </li>
+            <li class="flex gap-[10px] px-3 py-6 rounded-[8px] justify-between  bg-[#FFFFFF0D]">
+              <span>How does a virtual headset work?</span>
+              <img src="./images/arrow down.svg" alt="">
+            </li>
+            <li class="flex gap-[10px] px-3 py-6 rounded-[8px] justify-between  bg-[#FFFFFF0D]">
+              <span>How does a virtual headset work?</span>
+              <img src="./images/arrow down.svg" alt="">
+            </li>
+            <li class="flex gap-[10px] px-3 py-6 rounded-[8px] justify-between  bg-[#FFFFFF0D]">
+              <span>How does a virtual headset work?</span>
+              <img src="./images/arrow down.svg" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer class="bg-[#1C1128] text-white__text mt-7">
+      <div class="container flex flex-col gap-6">
+        <img src="./images/logo.svg" alt="" class="mt-6 w-[104px]">
+        <div class="flex gap-6">
+          <img src="./images/twitter.svg" alt="">
+          <img src="./images/instagram.svg" alt="">
+          <img src="./images/ic_round-discord.svg" alt="">
+          <img src="./images/facebook.svg" alt="">
+        </div>
+        <span class="text-white__text">(+994) 199-28-786</span>
+        <div class="flex gap-[60px]">
+          <ul class="flex flex-col gap-6">
+            <li>Menu</li>
+            <li class="text-[#FFFFFFCC]">Home</li>
+            <li class="text-[#FFFFFFCC]">Catalog</li>
+            <li class="text-[#FFFFFFCC]">Features</li>
+            <li class="text-[#FFFFFFCC]">Contact</li>
+          </ul>
+          <ul class="flex flex-col gap-6">
+            <li>Company</li>
+            <li class="text-[#FFFFFFCC]">Login</li>
+            <li class="text-[#FFFFFFCC]">Sign Up</li>
+            <li class="text-[#FFFFFFCC]">Privacy</li>
+            <li class="text-[#FFFFFFCC]">Products</li>
+          </ul>
+        </div>
+        <span class="font-bold text-[18px]">Subscribe Our News Letter</span>
+        <span class="text-[#FFFFFFCC]">Sure, please provide your email address to subscribe to newsletter</span>
+        <input type="email" placeholder="Enter your mail..." class="py-4 px-4 rounded-[4px] bg-transparent border border-[#FFFFFF33] outline-none">
+        <button class="universal__btn text-[#0F041C] font-bold text-base shadow-none footer__btn">Subscribe</button>
+        <div class="hero__hr footer__hr"></div>
+        <span class="text-[#FFFFFFCC]">© 2023 Your Company Name. All rights reserved.</span>
+      </div>
+    </footer>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

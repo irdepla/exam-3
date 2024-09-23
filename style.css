@@ -44,3 +44,30 @@
     content: url(./images/Star\ 5.svg);
 }
 
+
+.feedback__btn{
+    color: #3DDEED;
+    background-color: #3DDEED1A;
+    box-shadow: none;
+    padding: 16px 24px;
+}
+
+.gamer{
+    margin-top: 24px;
+    width: 100vw;
+}
+
+.footer__btn{
+    box-shadow: none;
+}
+.footer__hr{
+    width: 383px;
+}
+
+.home__hr{
+    width: 43px;
+}
+
+.search__bar input::after{
+    content: url(./images/search\ btn.svg);
+}
